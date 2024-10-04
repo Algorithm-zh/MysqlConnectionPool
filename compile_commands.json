@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/zxe/Documents/MysqlConnectionPool",
+  "command": "/usr/bin/c++  -I/home/zxe/Documents/MysqlConnectionPool/  -o CMakeFiles/MysqlConn.dir/MysqlConn.cpp.o -c /home/zxe/Documents/MysqlConnectionPool/MysqlConn.cpp",
+  "file": "/home/zxe/Documents/MysqlConnectionPool/MysqlConn.cpp"
+}
+]

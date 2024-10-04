@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/MysqlConn.dir/MysqlConn.cpp.o -o MysqlConn  -lmysqlclient 

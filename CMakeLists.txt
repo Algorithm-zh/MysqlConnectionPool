@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(MysqlConn)
+include_directories(./)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} SRC_LIST)
+add_executable(MysqlConn ${SRC_LIST})
+target_link_libraries(MysqlConn libmysqlclient.so)
