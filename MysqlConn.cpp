@@ -1,4 +1,6 @@
 #include "MysqlConn.h"
+#include <chrono>
+#include <cstddef>
 #include <iostream>
 #include <mysql/mysql.h>
 using namespace std;
@@ -12,6 +14,7 @@ MysqlConn::~MysqlConn() {
   if (m_conn != nullptr) {
     mysql_close(m_conn);
   }
+  freeResult();
 }
 bool MysqlConn::connect(string user, string passwd, string dbName, string ip,
                         unsigned short port) {
@@ -30,6 +33,7 @@ bool MysqlConn::update(string sql) {
   return true;
 }
 bool MysqlConn::query(string sql) {
+  freeResult();
   if (mysql_query(m_conn, sql.c_str())) {
     // 返回0说明执行成功了
     return false;
@@ -41,11 +45,13 @@ bool MysqlConn::query(string sql) {
 bool MysqlConn::next() {
   if (m_result != nullptr) {
     m_row = mysql_fetch_row(m_result); // 返回一级指针，指向某一行
-    return true;
+    if (m_row != nullptr)
+      return true;
   }
   return false;
 }
 string MysqlConn::value(int index) {
+  // 列数
   int rowCount = mysql_num_fields(m_result);
   if (index >= rowCount || index < 0) {
     return string();
@@ -62,4 +68,19 @@ bool MysqlConn::transaction() {
 // 提交事务
 bool MysqlConn::commit() { return mysql_commit(m_conn); }
 // 事务回滚
-bool rollback();
+bool MysqlConn::rollback() { return mysql_rollback(m_conn); }
+// 刷新起始的空闲时间点
+void MysqlConn::refreshAliveTime() { m_alivetime = steady_clock::now(); }
+// 计算连接存活的总时长
+long long MysqlConn::getAliveTime() {
+  nanoseconds res = steady_clock::now() - m_alivetime; // 精确到纳秒
+  milliseconds millsec = duration_cast<milliseconds>(res);
+  return millsec.count();
+}
+
+void MysqlConn::freeResult() {
+  if (m_result) {
+    mysql_free_result(m_result);
+    m_result = nullptr;
+  }
+}

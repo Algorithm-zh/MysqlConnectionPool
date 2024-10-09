@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/zxe/Documents/MysqlConnectionPool
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MysqlConn.dir/all
+all: CMakeFiles/main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MysqlConn.dir/clean
+clean: CMakeFiles/main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MysqlConn.dir
+# Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/MysqlConn.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zxe/Documents/MysqlConnectionPool/CMakeFiles --progress-num=1,2 "Built target MysqlConn"
-.PHONY : CMakeFiles/MysqlConn.dir/all
+CMakeFiles/main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zxe/Documents/MysqlConnectionPool/CMakeFiles --progress-num=1,2,3,4 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MysqlConn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxe/Documents/MysqlConnectionPool/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MysqlConn.dir/all
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxe/Documents/MysqlConnectionPool/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxe/Documents/MysqlConnectionPool/CMakeFiles 0
-.PHONY : CMakeFiles/MysqlConn.dir/rule
+.PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-MysqlConn: CMakeFiles/MysqlConn.dir/rule
-.PHONY : MysqlConn
+main: CMakeFiles/main.dir/rule
+.PHONY : main
 
 # clean rule for target.
-CMakeFiles/MysqlConn.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/clean
-.PHONY : CMakeFiles/MysqlConn.dir/clean
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

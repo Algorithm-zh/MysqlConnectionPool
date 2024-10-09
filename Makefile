@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MysqlConn
+# Target rules for targets named main
 
 # Build rule for target.
-MysqlConn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MysqlConn
-.PHONY : MysqlConn
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-MysqlConn/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/build
-.PHONY : MysqlConn/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+ConnecitonPool.o: ConnecitonPool.cpp.o
+.PHONY : ConnecitonPool.o
+
+# target to build an object file
+ConnecitonPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnecitonPool.cpp.o
+.PHONY : ConnecitonPool.cpp.o
+
+ConnecitonPool.i: ConnecitonPool.cpp.i
+.PHONY : ConnecitonPool.i
+
+# target to preprocess a source file
+ConnecitonPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnecitonPool.cpp.i
+.PHONY : ConnecitonPool.cpp.i
+
+ConnecitonPool.s: ConnecitonPool.cpp.s
+.PHONY : ConnecitonPool.s
+
+# target to generate assembly for a file
+ConnecitonPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnecitonPool.cpp.s
+.PHONY : ConnecitonPool.cpp.s
 
 MysqlConn.o: MysqlConn.cpp.o
 .PHONY : MysqlConn.o
 
 # target to build an object file
 MysqlConn.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/MysqlConn.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MysqlConn.cpp.o
 .PHONY : MysqlConn.cpp.o
 
 MysqlConn.i: MysqlConn.cpp.i
@@ -142,7 +166,7 @@ MysqlConn.i: MysqlConn.cpp.i
 
 # target to preprocess a source file
 MysqlConn.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/MysqlConn.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MysqlConn.cpp.i
 .PHONY : MysqlConn.cpp.i
 
 MysqlConn.s: MysqlConn.cpp.s
@@ -150,8 +174,32 @@ MysqlConn.s: MysqlConn.cpp.s
 
 # target to generate assembly for a file
 MysqlConn.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MysqlConn.dir/build.make CMakeFiles/MysqlConn.dir/MysqlConn.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MysqlConn.cpp.s
 .PHONY : MysqlConn.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -161,10 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MysqlConn"
+	@echo "... main"
+	@echo "... ConnecitonPool.o"
+	@echo "... ConnecitonPool.i"
+	@echo "... ConnecitonPool.s"
 	@echo "... MysqlConn.o"
 	@echo "... MysqlConn.i"
 	@echo "... MysqlConn.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

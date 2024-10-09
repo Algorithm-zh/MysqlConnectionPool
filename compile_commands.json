@@ -1,7 +1,17 @@
 [
 {
   "directory": "/home/zxe/Documents/MysqlConnectionPool",
-  "command": "/usr/bin/c++  -I/home/zxe/Documents/MysqlConnectionPool/  -o CMakeFiles/MysqlConn.dir/MysqlConn.cpp.o -c /home/zxe/Documents/MysqlConnectionPool/MysqlConn.cpp",
+  "command": "/usr/bin/c++  -I/home/zxe/Documents/MysqlConnectionPool/. -I/home/zxe/Documents/JSONCPP/jsoncpp/include/json  -o CMakeFiles/main.dir/ConnecitonPool.cpp.o -c /home/zxe/Documents/MysqlConnectionPool/ConnecitonPool.cpp",
+  "file": "/home/zxe/Documents/MysqlConnectionPool/ConnecitonPool.cpp"
+},
+{
+  "directory": "/home/zxe/Documents/MysqlConnectionPool",
+  "command": "/usr/bin/c++  -I/home/zxe/Documents/MysqlConnectionPool/. -I/home/zxe/Documents/JSONCPP/jsoncpp/include/json  -o CMakeFiles/main.dir/MysqlConn.cpp.o -c /home/zxe/Documents/MysqlConnectionPool/MysqlConn.cpp",
   "file": "/home/zxe/Documents/MysqlConnectionPool/MysqlConn.cpp"
+},
+{
+  "directory": "/home/zxe/Documents/MysqlConnectionPool",
+  "command": "/usr/bin/c++  -I/home/zxe/Documents/MysqlConnectionPool/. -I/home/zxe/Documents/JSONCPP/jsoncpp/include/json  -o CMakeFiles/main.dir/main.cpp.o -c /home/zxe/Documents/MysqlConnectionPool/main.cpp",
+  "file": "/home/zxe/Documents/MysqlConnectionPool/main.cpp"
 }
 ]

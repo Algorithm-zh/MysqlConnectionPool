@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MysqlConn.dir/ConnectionPool.cpp.o"
+  "CMakeFiles/MysqlConn.dir/ConnectionPool.cpp.o.d"
   "CMakeFiles/MysqlConn.dir/MysqlConn.cpp.o"
   "CMakeFiles/MysqlConn.dir/MysqlConn.cpp.o.d"
   "MysqlConn"
